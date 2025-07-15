@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, send_file
+from flask_cors import CORS # 導入 CORS
 import os
 import re
 from PyPDF2 import PdfReader
@@ -7,6 +8,7 @@ from io import BytesIO
 
 # 初始化 Flask 應用程式
 app = Flask(__name__)
+CORS(app) # 啟用 CORS，允許所有來源
 
 # 上傳頁面
 @app.route('/')
