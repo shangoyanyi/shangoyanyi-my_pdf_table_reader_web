@@ -5,10 +5,11 @@
 
 ## 使用方式
 ### 本地端使用
-1. 執行 run_app.py
-2. 在web畫面中選擇待讀取的 pdf 檔案並上傳
-3. 點「轉換」
-4. 程式會將讀取結果匯出為 output.xlsx，並自動下載
+1. 將 app.py 的 line2、line11 (flask_cors部分)註解
+2. 執行 run_app.py
+3. 在web畫面中選擇待讀取的 pdf 檔案並上傳
+4. 點「轉換」
+5. 程式會將讀取結果匯出為 output.xlsx，並自動下載
 
 ### 發佈到Render.com
 在 Render.com 建立一個新的 Web Service，並依照以下指示設定：
