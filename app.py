@@ -8,7 +8,13 @@ from io import BytesIO
 
 # 初始化 Flask 應用程式
 app = Flask(__name__)
-CORS(app, origins=["https://shangoyanyi.github.io"]) # 啟用 CORS，允許所有來源
+CORS(app, origins=[
+        "http://localhost",
+        "http://localhost:5000",
+        "http://127.0.0.1",
+        "http://127.0.0.1:5000",
+        "https://shangoyanyi.github.io"
+    ]) # 啟用 CORS，允許特定來源的請求
 
 # 上傳頁面
 @app.route('/')
